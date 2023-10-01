@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop.Practice1</title>
+</head>
+<body>
+<h1>Loop.Practice1</h1>
+
+<h2>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành</h2>
+<script>
+    let count = 0;
+    for (let count = 0; count < 100; count++) {
+        count=count++;
+    }
+    document.write("đã hoàn thành");
+</script>
+<h2>Bài 2: Kiểm tra nhiệt độ nhập vào và yêu cầu chỉnh >20 và <100  </h2>
+<!--<script>-->
+<!--  let temp = prompt('Xin mời nhập nhiệt độ');-->
+<!--  while (temp > 99) {-->
+<!--    document.write('Yêu cầu giảm nhiệt độ');-->
+<!--  }-->
+<!--  if(temp<21) {-->
+<!--    console.log('Yêu cầu tăng nhiệt độ');-->
+<!--  }-->
+<!--</script>-->
+<h2>Bài 3: Hiển thị ra 20 số đầu tiên trong dãy Fibonacci</h2>
+<script>
+    let fi1=1;
+    let fi2=2;
+    let fi3=0;
+    document.write(fi1 + " " + fi2 + " ");
+    for(let count = 0; count < 18; count++) {
+        fi3= fi1 + fi2;
+        fi1=fi2;
+        fi2=fi3;
+        document.write(fi3 + " ");
+        count = count++;
+    }
+</script>
+<h2>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5</h2>
+<script>
+    let f1=1;
+    let f2=2;
+    let f3=1;
+    for (let count = 1; count > 0; count++) {
+        f3= f1 + f2;
+        f1=f2;
+        f2=f3;
+        count = count++;
+        if (f3 % 5 ===0) {
+            document.write( f3 +" là số đầu tiên dãy Fibonacci chia hết cho 5")
+            break;
+        }
+    }
+</script>
+<h2>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</h2>
+<script>
+    let fibo1=1;
+    let fibo2=2;
+    let fibo3=0;
+    let sumfibo=3;
+    document.write(fibo1 + " " + fibo2 + " ");
+    for (count=0;count<3;count++) {
+        fibo3=fibo1+fibo2;
+        fibo1=fibo2;
+        fibo2=fibo3;
+        count=count++;
+        document.write(fibo3 + " ");
+        sumfibo= sumfibo + fibo3;
+    }
+    document.write("tổng 5 số Fibonnacci đầu tiên:" + sumfibo);
+</script>
+<h2>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</h2>
+<script>
+    let seven=0;
+    let sumseven=0;
+    for(id=0; id<30 ;id++) {
+        seven=seven+7;
+        sumseven=sumseven+seven;
+        id=id++;
+        document.write(seven + " ");
+    }
+    document.write("tổng 30 số chia hết cho 7 đầu tiên = " + sumseven);
+</script>
+<h2>Bài 7: In số 1-100, nếu chia hết 3 thì in Fizz, 5 thì in Buzz, cả 2 thì FizzBuzz</h2>
+<script>
+    let number=0;
+    for (let idnumber=0; idnumber<100; idnumber++) {
+        number+=1;
+        if(number%3==0&&number%5==0){
+            document.write(" FizzBuzz ");
+            continue;
+        }
+        if(number % 3 ===0) {
+            document.write("fizz ");
+            continue;
+        }
+        if(number % 5 === 0) {
+            document.write("buzz ");
+            continue;
+        }
+        document.write(number + " ");
+        idnumber=idnumber++;
+    }
+</script>
+</body>
+</html>
